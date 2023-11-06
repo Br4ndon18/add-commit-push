@@ -1,24 +1,24 @@
 import os 
 import sys
 
-
-
 commitCommand = '\ngit commit -m "Update files."'
 if len(sys.argv) == 3:
     if sys.argv[1] == '-m':
         commitCommand = '\ngit commit -m "' + sys.argv[2] + '"'
 
-print(commitCommand)
-
-print("Continue with add,commit,push? (y):")
-userInput = input()
-if userInput != 'y':
-    print('Canceling Program')
-    quit()
-
 print('add-commit-push')
 print('\ngit status')
 os.system('git status')
+
+force = False
+
+if force != False:
+    print("Continue with add,commit,push? (y):")
+    userInput = input()
+    if userInput != 'y':
+        print('Canceling Prgram')
+        quit()
+
 
 print('\ngit add -A')
 os.system('git add -A')
