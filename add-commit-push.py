@@ -10,6 +10,11 @@ if len(sys.argv) == 3:
 
 print(commitCommand)
 
+print("Continue with add,commit,push? (y):")
+userInput = input()
+if userInput != 'y':
+    print('Canceling Program')
+    quit()
 
 print('add-commit-push')
 print('\ngit status')
